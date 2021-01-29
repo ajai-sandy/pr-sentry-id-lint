@@ -1,0 +1,13 @@
+name: 'PR Sentry ID Lint'
+description: 'github action for automatically adding sentry ID on pull requests title'
+branding:
+  icon: 'git-pull-request'  
+  color: 'red'
+inputs: 
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+    required: true
+    
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
